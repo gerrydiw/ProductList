@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-import Header from './src/components/Header';
-
-class App extends Component {
+class Header extends Component {
   render() {
     return (
       <View>
-        <Header />
-        <Text>Hello World</Text>
+        <Text>Header</Text>
       </View>
     );
   }
 }
 
-export default App;
+export default Header;

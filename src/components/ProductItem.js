@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Linking } from 'react-native';
 import Card from './Card'
 import CardSection from './CardSection'
+import Button from './Button'
 
 const style = StyleSheet.create({
   ProductImage: {
@@ -48,6 +49,11 @@ class ProductItem extends Component {
         <Text tyle={ style.productPrice }>
             { this.getPriceFromatted(price) }
         </Text>
+        </CardSection>
+        <CardSection>
+          <Button onPress={ () => Linking.openURL(actionLink)}>
+          Buy Now
+          </Button>
         </CardSection>
       </Card>
     );
